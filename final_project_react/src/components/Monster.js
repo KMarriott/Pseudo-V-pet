@@ -30,10 +30,10 @@ class Monster extends Component {
     </div>
 
     <div className="button_container">
-    <div className="button hvr-grow" onClick={(e) => feed(e, monster)}> Feed </div>
-    <div className="button hvr-grow" onClick={(e) => clean_up(e, monster)}> Clean Up </div>
-    <div className="button hvr-grow" onClick={(e) => train(e, monster)}> Train </div>
-    <div className="button hvr-grow" onClick={(e) => rest(e, monster)}> Rest </div>
+    <div className="button hvr-box-shadow-inset noselect" onClick={(e) => feed(e, monster)}> Feed </div>
+    <div className="button hvr-box-shadow-inset noselect" onClick={(e) => clean_up(e, monster)}> Clean Up </div>
+    <div className="button hvr-box-shadow-inset noselect" onClick={(e) => train(e, monster)}> Train </div>
+    <div className="button hvr-box-shadow-inset noselect" onClick={(e) => rest(e, monster)}> Rest </div>
     </div>
 
     <div className="monster_item">
