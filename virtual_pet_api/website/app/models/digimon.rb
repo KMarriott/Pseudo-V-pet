@@ -1,0 +1,2 @@
+class Digimon < ApplicationRecord
+end

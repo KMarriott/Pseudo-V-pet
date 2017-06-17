@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  species: MyString
+  stage: MyString
+  image: MyString
+
+two:
+  id: 
+  species: MyString
+  stage: MyString
+  image: MyString
