@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617063809) do
+ActiveRecord::Schema.define(version: 20170620040455) do
 
   create_table "digimons", force: :cascade do |t|
     t.string   "species"
@@ -18,6 +18,30 @@ ActiveRecord::Schema.define(version: 20170617063809) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "eggs", force: :cascade do |t|
+    t.string   "species"
+    t.string   "stage"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "evolutions", force: :cascade do |t|
+    t.integer  "digimon_id"
+    t.string   "species"
+    t.string   "evolve_to"
+    t.integer  "priority"
+    t.string   "love",       default: ">0"
+    t.string   "strength",   default: ">0"
+    t.string   "energy",     default: ">0"
+    t.string   "health",     default: ">0"
+    t.string   "hunger",     default: ">0"
+    t.string   "hygiene",    default: ">0"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["digimon_id"], name: "index_evolutions_on_digimon_id"
   end
 
   create_table "homes", force: :cascade do |t|

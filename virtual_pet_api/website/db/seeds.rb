@@ -10,13 +10,21 @@
 #rails g model Evolution default, Low Med, Hard, Evil, Bad, 
 #rails g model Digimon id:int species:string stage:string image:string
 #rails g model Evolutions base_species:string to_species:string priority:1 condition:???
+#rails g model Egg species:string stage:string image:string
+#rails g model Evolution digimon:references species:string evolve_to:string priority:integer love:string strength:string energy:string health:string hunger:string hygiene:string
 
 
-
-Digimon.create([{
-	species: "Dead",
-	stage: "egg",
-	image: "http://i.imgur.com/wPkyvgE.png"},
+Digimon.create([
+	{
+		species: "Striped Egg",
+		stage: "egg",
+		image: "http://i.imgur.com/wPkyvgE.png"
+	},
+	{
+		species: "Dead",
+		stage: "egg",
+		image: "http://piq.codeus.net/static/media/userpics/piq_245518_400x400.png"
+	},
 	{
 		species: "Botamon",
 		stage: "babyI",
@@ -117,4 +125,57 @@ Digimon.create([{
 		stage: "ultimate",
 		image: "https://wikimon.net/images/0/04/Wargreymon_vpet_20th.gif",
 	}
+	])
+
+
+Evolution.create([
+	{
+	digimon_id: Digimon.find_by_species('Striped Egg').id,
+	species: "Striped Egg",
+	evolve_to: "Botamon",
+	priority: 1,
+	love: ">0",
+	strength: ">0",
+	},
+	{
+	digimon_id: Digimon.find_by_species('Botamon').id,
+	species: "Botamon",
+	evolve_to: "Koromon",
+	priority: 1,
+	love: ">0",
+	strength: ">0"
+	},
+	{
+	digimon_id: Digimon.find_by_species('Koromon').id,
+	species: "Koromon",
+	evolve_to: "Agumon",
+	priority: 1,
+	love: ">5",
+	strength: ">5"
+	},
+	{
+	digimon_id: Digimon.find_by_species('Agumon').id,
+	species: "Agumon",
+	evolve_to: "Greymon",
+	priority: 1,
+	love: ">10",
+	strength: ">10"
+	},
+	{
+	digimon_id: Digimon.find_by_species('Greymon').id,	
+	species: "Greymon",
+	evolve_to: "MetalGreymon",
+	priority: 1,
+	love: ">25",
+	strength: ">25"
+	},
+	{
+	digimon_id: Digimon.find_by_species('MetalGreymon').id,
+	species: "MetalGreymon",
+	evolve_to: "WarGreymon",
+	priority: 1,
+	love: ">40",
+	strength: ">40"
+	}
+
 	])

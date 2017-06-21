@@ -22,7 +22,7 @@ class Api::V1::DigimonsController < Api::V1::BaseController
 	private
 
 	def digimon_params
-		params.require(:digimon).permit(:id, :species, :description) 
+		params.require(:digimon).permit(:species, :image, :stage) 
 	end 
 
 end

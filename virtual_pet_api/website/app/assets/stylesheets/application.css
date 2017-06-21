@@ -34,3 +34,30 @@
 .Aligner-item--bottom {
   align-self: flex-end;
 }
+
+
+.digimon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+   flex-wrap: wrap;
+}
+
+.column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+   flex-wrap: wrap;
+}
+
+.margin{
+	padding: 10px;
+}
+
+h3{
+	text-align: center;
+}

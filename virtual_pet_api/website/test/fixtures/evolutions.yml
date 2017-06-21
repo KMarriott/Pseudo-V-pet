@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  digimon: one
+  species: MyString
+  evolve_to: MyString
+  priority: 1
+  love: MyString
+  strength: MyString
+  energy: MyString
+  health: MyString
+  hunger: MyString
+  hygiene: MyString
+
+two:
+  digimon: two
+  species: MyString
+  evolve_to: MyString
+  priority: 1
+  love: MyString
+  strength: MyString
+  energy: MyString
+  health: MyString
+  hunger: MyString
+  hygiene: MyString
