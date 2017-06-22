@@ -162,6 +162,14 @@ Evolution.create([
 	strength: ">10"
 	},
 	{
+	digimon_id: Digimon.find_by_species('Agumon').id,
+	species: "Agumon",
+	evolve_to: "Tyranomon",
+	priority: 1,
+	love: ">10",
+	strength: ">10"
+	},
+	{
 	digimon_id: Digimon.find_by_species('Greymon').id,	
 	species: "Greymon",
 	evolve_to: "MetalGreymon",

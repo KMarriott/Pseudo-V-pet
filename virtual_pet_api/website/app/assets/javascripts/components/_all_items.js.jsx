@@ -15,16 +15,13 @@ var AllItems = React.createClass({
 
 
 	render() {
-
-
-		var digimons= this.props.digimon.map((digimon) => {
-			return (<div> <img src={digimon.image}/> <p>{digimon.species}</p> </div>) });
-		
+			
 
 
 		var eggs = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='egg'){
 				return ( <Digimon digimon={digimon}
+					digimons= {this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -46,6 +43,7 @@ var AllItems = React.createClass({
 		var babyII_digimon = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='babyII'){
 				return ( <Digimon digimon={digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -56,6 +54,7 @@ var AllItems = React.createClass({
 		var child_digimon = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='child'){
 				return ( <Digimon digimon={digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -66,6 +65,7 @@ var AllItems = React.createClass({
 		var adult_digimon = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='adult'){
 				return ( <Digimon digimon={digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -76,6 +76,7 @@ var AllItems = React.createClass({
 		var perfect_digimon = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='perfect'){
 				return ( <Digimon digimon={digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -86,6 +87,7 @@ var AllItems = React.createClass({
 		var ultimate_digimon = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='ultimate'){
 				return ( <Digimon digimon={digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>

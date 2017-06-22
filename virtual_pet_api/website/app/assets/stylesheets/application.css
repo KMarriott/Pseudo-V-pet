@@ -54,6 +54,15 @@
    flex-wrap: wrap;
 }
 
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+   flex-wrap: wrap;
+}
+
 .margin{
 	padding: 10px;
 }

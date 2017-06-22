@@ -8,15 +8,39 @@ var Digimon = React.createClass({
 			new_stage: this.props.digimon.stage,
 		}
 	},
-	handleEdit() {
+	handleEdit(e) {
+		e.preventDefault()
+
 		if(this.state.editable) {
-			var species = this.state.new_species
-			var image = this.state.new_image
-			console.log('in handleEdit', this.state.editable, species, image);
+
+			var species = this.state.new_species;
+			var stage = this.state.new_stage;
+			var image = this.state.new_image;
+			var confirm = window.confirm(`Do you want to add ${species}`)
+			if(confirm === true)
+			{
+				$.ajax({
+					url: `/api/v1/digimons/${this.props.digimon.id}`,
+					type: 'PUT',
+					data: { digimon: { species: species, stage: stage, image: image } },
+					success: (response) => {
+						console.log('it worked!', response);
+						alert(`You updated ${species}.`)
+						this.props.editDigimonState(response)
+
+					}
+				});
+			}
 
 		}
 		this.setState({editable: !this.state.editable})
 	},
+	handleCancel(e) {
+		e.preventDefault()
+
+		this.setState({editable: !this.state.editable})
+	},
+
 
 
 	changeStage(e){
@@ -39,24 +63,6 @@ var Digimon = React.createClass({
 
 	submitForm(e) {
 		e.preventDefault()
-		var species = this.state.new_species;
-		var stage = this.state.new_stage;
-		var image = this.state.new_image;
-		// var confirm = window.confirm(`Do you want to add ${species}`)
-		// if(confirm === true)
-		{
-			$.ajax({
-				url: `/api/v1/digimons/${this.props.digimon.id}`,
-				type: 'PUT',
-				data: { digimon: { species: species, stage: stage, image: image } },
-				success: (response) => {
-					console.log('it worked!', response);
-					// alert(`You updated ${species}.`)
-					this.props.editDigimonState(response)
-
-				}
-			});
-		}
 	},
 
 
@@ -67,17 +73,17 @@ var Digimon = React.createClass({
 
 
 		return ( 
-			<form className="column" onSubmit={this.submitForm}>
+			<form className="column">
 			<div className='center margin' key={this.props.digimon.id}>
 			{this.state.editable ? <img src={this.state.new_image}/> : ""}
 			<div>{image}</div>
 			<div>{species}</div>
 			<div>{this.state.editable ? "Stage :" : ""} {stage}</div>
-			<div>{this.state.editable ? "Evolutions" : ""}</div>
+			<div>{this.state.editable ? <Evolutions digimon= {this.props.digimon} digimons={this.props.digimons}/> : ""}</div>
 
 			<button onClick={this.props.handleDelete} >Delete</button>
 			<button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
-
+			{this.state.editable ? <button onClick={this.handleCancel}>Cancel</button> : '' } 
 			</div></form>
 			)
 	}
