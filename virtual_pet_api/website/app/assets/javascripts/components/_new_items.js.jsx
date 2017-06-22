@@ -4,19 +4,18 @@
 var NewItems = React.createClass({
 	getInitialState() {
 		return {
-			species: '',
-			image: '',
-			stage: 'Egg',
+			new_species: '',
+			new_image: '',
+			new_stage: 'egg',
 			message: ''
 		}
 	},
 	submitForm(e) {
 		e.preventDefault()
-		var species = this.state.species;
-		var stage = this.state.stage;
-		var image = this.state.image;
+		var species = this.state.new_species;
+		var stage = this.state.new_stage;
+		var image = this.state.new_image;
 		var confirm = window.confirm(`Do you want to add ${species}`)
-		console.log(confirm)
 		if(confirm === true)
 		{
 			$.ajax({
@@ -36,18 +35,18 @@ var NewItems = React.createClass({
 	},
 	changeStage(e){
 		this.setState({
-			stage: e.target.value
+			new_stage: e.target.value
 		})
 	},
 	changeImage(e){
 		this.setState({
-			image: e.target.value
+			new_image: e.target.value
 		})
 
 	},
 	changeSpecies(e){
 		this.setState({
-			species: e.target.value
+			new_species: e.target.value
 		})
 
 	},

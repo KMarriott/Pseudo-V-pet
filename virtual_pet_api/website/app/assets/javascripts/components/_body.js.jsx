@@ -13,6 +13,11 @@ var Body = React.createClass({
 		var newState = this.state.digimon.concat(data);
 		this.setState({ digimon: newState })
 	},
+	editDigimonState(response_digimon) {
+    var digimons = this.state.digimon.filter((i) => { return i.id != response_digimon.id });
+    digimons.push(response_digimon);
+    this.setState({digimon: digimons });
+},
 	getInitialState() {
 		return {
 			digimon: []
@@ -28,12 +33,9 @@ var Body = React.createClass({
 				console.log('successfully removed digimon')
 			}
 		});
-
-		console.log('in handle delete' + id);
 	},
 	removeDigimon(id) {
 		var newDigimon = this.state.digimon.filter((digimon) => {
-			console.log(digimon.id)
 			return digimon.id != id;
 		});
 
@@ -46,7 +48,7 @@ var Body = React.createClass({
 			<div> 
 
 			<NewItems digimon={this.state.digimon} updateDigimonState={this.updateDigimonState}/>
-			<AllItems  digimon={this.state.digimon} handleDelete={this.handleDelete} removeDigimon={this.removeDigimon}/>
+			<AllItems  digimon={this.state.digimon} handleDelete={this.handleDelete} removeDigimon={this.removeDigimon} editDigimonState={this.editDigimonState}/>
 
 			</div>
 			)
