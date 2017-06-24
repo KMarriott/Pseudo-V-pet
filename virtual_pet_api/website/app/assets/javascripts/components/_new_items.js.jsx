@@ -7,8 +7,7 @@ var NewItems = React.createClass({
 			new_species: '',
 			new_image: '',
 			new_stage: 'egg',
-			message: '',
-			click: false
+			message: ''
 		}
 	},
 	submitForm(e) {
@@ -51,12 +50,7 @@ var NewItems = React.createClass({
 		})
 
 	},
-	handleClick(e){
-		this.setState({
-			click: !this.state.click
-		})
 
-	},
 
 
 
@@ -66,8 +60,8 @@ var NewItems = React.createClass({
 		return(
 			<div className="column">
 
-			<h2 onClick={this.handleClick}>Add New Digimon</h2>
-			{this.state.click ? <div>
+			<h2>Add New Digimon</h2>
+			<div>
 			<form className="column" onSubmit={this.submitForm}>
 			Species <input name='species' placeholder='Enter the species name of your digimon' onChange={this.changeSpecies}/>
 			Image <input name='image' placeholder='Enter an image url for now' onChange={this.changeImage}/>
@@ -90,8 +84,6 @@ var NewItems = React.createClass({
 			</form>
 			<div>{this.state.message}</div>
 			</div>
-			: ""}
-
 
 
 

@@ -16,13 +16,21 @@
  @import url('https://fonts.googleapis.com/css?family=VT323');
 
  img{
-  border-style: solid;
+  border-bottom-style: solid;
 }
 body{
   font-family: 'VT323', monospace;
   font-size: 110%;
 }
+.new_button{
+  cursor: pointer;
 
+
+}
+.new_button:hover{
+  background: grey;
+
+}
 .border{
   border-style: solid;
   padding: 5px;
@@ -30,8 +38,8 @@ body{
 }
 
 .border-top-bottom{
-  border-top-style: solid;
-  border-bottom-style: solid;
+/*  border-top-style: solid;
+  border-bottom-style: solid;*/
   padding: 5px;
   margin: 5px;
   width: 100%;

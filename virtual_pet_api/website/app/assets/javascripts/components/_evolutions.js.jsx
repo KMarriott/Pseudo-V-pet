@@ -82,6 +82,11 @@ var Evolutions = React.createClass({
 		e.preventDefault()
 	},
 
+	addEvolution(e) {
+		e.preventDefault()
+		alert("Please add evolution feature.")
+	},
+
 
 	render() {
 
@@ -105,7 +110,7 @@ var Evolutions = React.createClass({
 		return ( 
 			<div>
 			<br/>
-			<button>Add New Evolution</button>
+			<button onClick= {this.addEvolution}>Add New Evolution</button>
 			<button onClick={this.showEvolutions}>Edit Evolutions</button>
 			{this.state.evolution_edit ? <div><div className='row'>
 			{evolution_options}

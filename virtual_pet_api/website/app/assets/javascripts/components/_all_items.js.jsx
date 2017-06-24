@@ -106,34 +106,34 @@ var AllItems = React.createClass({
 			<div className='Aligner border-top-bottom'>{eggs}</div>
 			
 			
-			<h3>Baby I </h3>
+			<h3>Baby I / Fresh</h3>
 			<div className='Aligner border-top-bottom'>{babyI_digimon}</div>
 			
 
 
 			
-			<h3>Baby II</h3>
+			<h3>Baby II / In-Training</h3>
 			<div className='Aligner border-top-bottom'>{babyII_digimon}</div>
 			
 
 
 			
-			<h3>Child</h3>
+			<h3>Child / Rookie</h3>
 			<div className='Aligner border-top-bottom'>{child_digimon}</div>
 			
 
 			
-			<h3>Adult</h3>
+			<h3>Adult / Champion</h3>
 			<div className='Aligner border-top-bottom'>{adult_digimon}</div>
 			
 
 			
-			<h3>Perfect</h3>
+			<h3>Perfect / Ultimate</h3>
 			<div className='Aligner border-top-bottom'>{perfect_digimon}</div>
 			
 
 			
-			<h3>Ultimate</h3>
+			<h3>Ultimate / Mega</h3>
 			<div className='Aligner border-top-bottom'>{ultimate_digimon}</div>
 			
 			</div>

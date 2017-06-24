@@ -52,6 +52,10 @@ var EvoSelect = React.createClass({
 				});
 			}
 	},
+	handleDelete(e){
+		e.preventDefault()
+		alert("Please code delete")
+	},
 
 	render(){
 		var evolution = this.state.evolution
@@ -71,6 +75,7 @@ var EvoSelect = React.createClass({
 				<div>Energy {this.stat_form('energy', evolution.energy_type, evolution.energy)}</div>
 
 				<button onClick={this.handleSubmit}> Submit </button>
+				<button onClick={this.handleDelete}> Delete </button>
 				<br/>
 			</div>
 				
