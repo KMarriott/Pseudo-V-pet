@@ -133,57 +133,63 @@ Evolution.create([
 	digimon_id: Digimon.find_by_species('Striped Egg').id,
 	species: "Striped Egg",
 	evolve_to: "Botamon",
-	priority: 1,
-	love: ">0",
-	strength: ">0",
+	priority: 1
 	},
 	{
 	digimon_id: Digimon.find_by_species('Botamon').id,
 	species: "Botamon",
 	evolve_to: "Koromon",
-	priority: 1,
-	love: ">0",
-	strength: ">0"
+	priority: 1
 	},
 	{
 	digimon_id: Digimon.find_by_species('Koromon').id,
 	species: "Koromon",
 	evolve_to: "Agumon",
 	priority: 1,
-	love: ">5",
-	strength: ">5"
+	love: "5",
+	strength: "5",
+	love_type: ">",
+	strength_type: ">"
 	},
 	{
 	digimon_id: Digimon.find_by_species('Agumon').id,
 	species: "Agumon",
 	evolve_to: "Greymon",
 	priority: 1,
-	love: ">10",
-	strength: ">10"
+	love: "15",
+	strength: "10",
+	love_type: ">",
+	strength_type: ">"
 	},
 	{
 	digimon_id: Digimon.find_by_species('Agumon').id,
 	species: "Agumon",
 	evolve_to: "Tyranomon",
-	priority: 1,
+	priority: 2,
 	love: ">10",
-	strength: ">10"
+	strength: ">10",
+	love_type: ">",
+	strength_type: ">"
 	},
 	{
 	digimon_id: Digimon.find_by_species('Greymon').id,	
 	species: "Greymon",
 	evolve_to: "MetalGreymon",
 	priority: 1,
-	love: ">25",
-	strength: ">25"
+	love: "25",
+	strength: "25",
+	love_type: ">",
+	strength_type: ">"
 	},
 	{
 	digimon_id: Digimon.find_by_species('MetalGreymon').id,
 	species: "MetalGreymon",
 	evolve_to: "WarGreymon",
 	priority: 1,
-	love: ">40",
-	strength: ">40"
+	love: "40",
+	strength: "40",
+	love_type: ">",
+	strength_type: ">"
 	}
 
 	])

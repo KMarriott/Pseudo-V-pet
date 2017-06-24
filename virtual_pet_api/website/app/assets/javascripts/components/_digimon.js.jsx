@@ -74,11 +74,12 @@ var Digimon = React.createClass({
 
 		return ( 
 			<form className="column">
-			<div className='center margin' key={this.props.digimon.id}>
+			<div className='center margin border' key={this.props.digimon.id}>
 			{this.state.editable ? <img src={this.state.new_image}/> : ""}
 			<div>{image}</div>
 			<div>{species}</div>
 			<div>{this.state.editable ? "Stage :" : ""} {stage}</div>
+
 			<div>{this.state.editable ? <Evolutions digimon= {this.props.digimon} digimons={this.props.digimons}/> : ""}</div>
 
 			<button onClick={this.props.handleDelete} >Delete</button>

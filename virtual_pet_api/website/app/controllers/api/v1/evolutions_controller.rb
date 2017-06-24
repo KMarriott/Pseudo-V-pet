@@ -22,7 +22,7 @@ class Api::V1::EvolutionsController < Api::V1::BaseController
 	private
 
 	def evolution_params
-		params.require(:evolution).permit(:id, :species, :description) 
+		params.require(:evolution).permit(:id, :digimon_id, :energy, :energy_type, :evolve_to, :health, :health_type, :hygiene, :hygiene_type, :love, :love_type, :priority, :strength, :strength_type) 
 	end 
 
 end

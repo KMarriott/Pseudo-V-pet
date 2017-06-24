@@ -47,6 +47,15 @@ var Evolutions = React.createClass({
 	},
 	handleEdit(e) {
 		e.preventDefault()
+		console.log("handleEdit")
+	},
+	showEvolutions(e){
+
+		e.preventDefault()
+
+		this.setState({
+			evolution_edit: !this.state.evolution_edit
+		})		
 	},
 
 
@@ -88,27 +97,23 @@ var Evolutions = React.createClass({
 				}
 			}
 
-			return (<div className='center column' key={evolution.id}>
-				<div>{evolution.evolve_to}</div>
-				<img src={evolve_digimon.image}/>
-				<div>Priority - {evolution.priority}</div>
-				<div>Requirements</div>
-				<div>Love - {evolution.love}</div>
-				<div>Strength - {evolution.strength}</div>
-				<div>Health - {evolution.health}</div>
-				<div>Hunger - {evolution.hunger}</div>
-				<div>Hygiene - {evolution.hygiene}</div>
-				<div>Energy - {evolution.energy}</div>
-				</div>)
+			return (<EvoSelect evolution={evolution}
+				evolve_digimon = {evolve_digimon}
+				showEvolutions = {this.showEvolutions}/>)
 		})
 
 		return ( 
 			<div>
-			Evolutions
-			
-			<div className='row'>
+			<br/>
+			<button>Add New Evolution</button>
+			<button onClick={this.showEvolutions}>Edit Evolutions</button>
+			{this.state.evolution_edit ? <div><div className='row'>
 			{evolution_options}
 			</div>
+			<button onClick={this.showEvolutions}> Cancel </button></div> : ""}
+			
+
+
 			
 			</div>
 			)

@@ -14,14 +14,12 @@ var AllItems = React.createClass({
 
 
 
-	render() {
-			
-
+	render() {	
 
 		var eggs = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='egg'){
 				return ( <Digimon digimon={digimon}
-					digimons= {this.props.digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -33,6 +31,7 @@ var AllItems = React.createClass({
 		var babyI_digimon = this.props.digimon.map((digimon) => {
 			if(digimon.stage==='babyI'){
 				return ( <Digimon digimon={digimon}
+					digimons={this.props.digimon}
 					handleDelete={this.handleDelete.bind(this, digimon)}
 					handleEdit={this.handleEdit}
 					editDigimonState={this.props.editDigimonState}/>
@@ -100,43 +99,42 @@ var AllItems = React.createClass({
 		return (
 			<div>
 			
-			<div className="digimon">
+			<div className="digimon ">
 			<h1>All Digimon</h1>
 			
-			
 			<h3>Eggs</h3>
-			<div className='Aligner'>{eggs}</div>
+			<div className='Aligner border-top-bottom'>{eggs}</div>
 			
 			
 			<h3>Baby I </h3>
-			<div className='Aligner'>{babyI_digimon}</div>
+			<div className='Aligner border-top-bottom'>{babyI_digimon}</div>
 			
 
 
 			
 			<h3>Baby II</h3>
-			<div className='Aligner'>{babyII_digimon}</div>
+			<div className='Aligner border-top-bottom'>{babyII_digimon}</div>
 			
 
 
 			
 			<h3>Child</h3>
-			<div className='Aligner'>{child_digimon}</div>
+			<div className='Aligner border-top-bottom'>{child_digimon}</div>
 			
 
 			
 			<h3>Adult</h3>
-			<div className='Aligner'>{adult_digimon}</div>
+			<div className='Aligner border-top-bottom'>{adult_digimon}</div>
 			
 
 			
 			<h3>Perfect</h3>
-			<div className='Aligner'>{perfect_digimon}</div>
+			<div className='Aligner border-top-bottom'>{perfect_digimon}</div>
 			
 
 			
 			<h3>Ultimate</h3>
-			<div className='Aligner'>{ultimate_digimon}</div>
+			<div className='Aligner border-top-bottom'>{ultimate_digimon}</div>
 			
 			</div>
 			</div>

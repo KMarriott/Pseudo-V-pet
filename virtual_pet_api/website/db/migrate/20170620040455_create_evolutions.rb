@@ -5,12 +5,18 @@ class CreateEvolutions < ActiveRecord::Migration[5.0]
       t.string :species
       t.string :evolve_to
       t.integer :priority
-      t.string :love, default: ">0"
-      t.string :strength, default: ">0"
-      t.string :energy, default: ">0"
-      t.string :health, default: ">0"
-      t.string :hunger, default: ">0"
-      t.string :hygiene, default: ">0"
+      t.integer :love, default: "0"
+      t.integer :strength, default: "0"
+      t.integer :energy, default: "0"
+      t.integer :health, default: "0"
+      t.integer :hunger, default: "0"
+      t.integer :hygiene, default: "0"
+      t.string :love_type, default: ">"
+      t.string :strength_type, default: ">"
+      t.string :energy_type, default: ">"
+      t.string :health_type, default: ">"
+      t.string :hunger_type, default: ">"
+      t.string :hygiene_type, default: ">"
 
       t.timestamps
     end

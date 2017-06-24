@@ -33,14 +33,20 @@ ActiveRecord::Schema.define(version: 20170620040455) do
     t.string   "species"
     t.string   "evolve_to"
     t.integer  "priority"
-    t.string   "love",       default: ">0"
-    t.string   "strength",   default: ">0"
-    t.string   "energy",     default: ">0"
-    t.string   "health",     default: ">0"
-    t.string   "hunger",     default: ">0"
-    t.string   "hygiene",    default: ">0"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.integer  "love",          default: 0
+    t.integer  "strength",      default: 0
+    t.integer  "energy",        default: 0
+    t.integer  "health",        default: 0
+    t.integer  "hunger",        default: 0
+    t.integer  "hygiene",       default: 0
+    t.string   "love_type",     default: ">"
+    t.string   "strength_type", default: ">"
+    t.string   "energy_type",   default: ">"
+    t.string   "health_type",   default: ">"
+    t.string   "hunger_type",   default: ">"
+    t.string   "hygiene_type",  default: ">"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["digimon_id"], name: "index_evolutions_on_digimon_id"
   end
 

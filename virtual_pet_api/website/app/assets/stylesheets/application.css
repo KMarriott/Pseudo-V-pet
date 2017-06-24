@@ -13,6 +13,35 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=VT323');
+
+ img{
+  border-style: solid;
+}
+body{
+  font-family: 'VT323', monospace;
+  font-size: 110%;
+}
+
+.border{
+  border-style: solid;
+  padding: 5px;
+  margin: 5px;
+}
+
+.border-top-bottom{
+  border-top-style: solid;
+  border-bottom-style: solid;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+}
+
+
+input{
+  text-align: center;
+}
+
 .center{
 	text-align: center;
 }
@@ -42,7 +71,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .column{
@@ -51,7 +80,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .row{
@@ -60,7 +89,7 @@
   justify-content: center;
   flex-direction: row;
   text-align: center;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .margin{
